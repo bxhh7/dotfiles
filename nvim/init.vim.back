@@ -1,0 +1,104 @@
+"set encoding=utf-8
+"let g:solarized_termcolors=256
+"set termguicolors
+
+call plug#begin('~/.vim/plugged')
+Plug 'arzg/vim-substrata'
+Plug 'preservim/nerdtree'
+"Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ajh17/Spacegray.vim'
+Plug 'tyrannicaltoucan/vim-deep-space'
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'chriskempson/vim-tomorrow-theme'
+"Plug 'danishprakash/vim-yami'
+"Plug 'preservim/nerdcommenter'
+"Plug 'airblade/vim-rooter'
+Plug 'arcticicestudio/nord-vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'preservim/nerdtree'
+"Plug 'tpope/vim-surround'
+Plug 'ajh17/Spacegray.vim'
+Plug 'tyrannicaltoucan/vim-deep-space'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
+Plug 'stevearc/aerial.nvim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+
+Plug 'bfrg/vim-cpp-modern'
+"Plug 'simrat39/symbols-outline.nvim'
+
+call plug#end()
+
+set noshowmode
+
+" Disable function highlighting (affects both C and C++ files)
+"let g:cpp_function_highlight = 0
+
+" Enable highlighting of C++11 attributes
+let g:cpp_attributes_highlight = 1
+
+" Highlight struct/class member variables (affects both C and C++ files)
+let g:cpp_member_highlight = 1
+
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 1
+
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
+"highlight Cursor guifg=white guibg=blue
+"highlight iCursor guifg=white guibg=steelblue
+"set guicursor=n-v-c:block-Cursor
+"set guicursor+=i:ver100-iCursor
+"set guicursor+=n-v-c:blinkon0
+"set guicursor+=i:blinkon1
+let g:borlandp_bg = "black"
+
+"set cursorline 
+set background=dark
+colorscheme default 
+"colorscheme darkspace 
+map <C-n> :NERDTreeToggle<CR>
+"map <C-q> :wqa<CR>
+set mouse=a
+
+set background=dark
+syntax on
+set nu
+set autoindent
+set noic
+let g:darkspace_italics=1
+"set laststatus=2
+set statusline=\ ->%f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
+:hi MyRedHighlightingGroup ctermfg=red ctermbg=black guifg=red guibg=black
+
+
+syntax on
+filetype plugin indent on
+set belloff=all
+set t_Co=256
+map <C-o> :badd  
+map <C-b> :buffer  
+"map <C-S-B> :buffers<CR> 
+map <C-l> :bnext<CR>
+map <C-h> :bprevious<CR>
+map <C-n> :NERDTreeToggle<CR>
+"map <C-w> :w<CR>
+map <C-q> :bdelete!<CR>
+map <C-z> :!zsh<CR>set
+
+"hi Normal guibg=NONE ctermbg=NONE
+
+if !exists(":DiffOrig")
+    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+          \ | wincmd p | diffthis
+endif
+set colorcolumn=100
