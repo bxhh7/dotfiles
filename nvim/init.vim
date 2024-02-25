@@ -19,6 +19,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'normen/vim-pio'
 Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
+Plug 'cpiger/NeoDebug'
+Plug 'vim-utils/vim-man'
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'chriskempson/vim-tomorrow-theme'
 "Plug 'danishprakash/vim-yami'
@@ -30,15 +32,15 @@ Plug 'ervandew/supertab'
 "Plug 'tpope/vim-surround'
 "Plug 'ajh17/Spacegray.vim'
 "Plug 'tyrannicaltoucan/vim-deep-space'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'stevearc/aerial.nvim'
 
 Plug 'bfrg/vim-cpp-modern'
 "Plug 'simrat39/symbols-outline.nvim'
 
+Plug 'lambdalisue/vim-manpager'
 
+" neobundle.
 call plug#end()
 
 set noshowmode
@@ -48,6 +50,7 @@ set noshowmode
 
 " Enable highlighting of C++11 attributes
 let g:cpp_attributes_highlight = 1
+
 
 " Highlight struct/class member variables (affects both C and C++ files)
 let g:cpp_member_highlight = 1
