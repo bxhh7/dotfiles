@@ -10,13 +10,15 @@ call plug#begin('~/.vim/plugged')
 "Plug 'bagrat/vim-buffet'
 "Plug 'preservim/nerdtree'
 "Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-buftabline'
 Plug 'cpiger/NeoDebug'
 Plug 'preservim/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'normen/vim-pio'
-
+Plug 'tpope/vim-commentary'
+Plug 'ervandew/supertab'
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'chriskempson/vim-tomorrow-theme'
 "Plug 'danishprakash/vim-yami'
@@ -89,7 +91,7 @@ set belloff=all
 set t_Co=256
 
 
-map <C-o> :badd  
+map <C-a> :badd  
 map <C-b> :buffer  
 "map <C-S-B> :buffers<CR> 
 map <C-l> :bnext<CR>
@@ -103,7 +105,6 @@ map <C-q> :bdelete!<CR>
 
 "FZF 
 map <C-b> :Buffers <CR>
-map <C-a> :Ag <CR>
 map <C-f> :Files <CR>
 map <C-M> :Marks <CR>
 if !exists(":DiffOrig")
